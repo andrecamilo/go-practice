@@ -10,19 +10,21 @@ import (
 
 func pangrams(s string) string {
 
-	alfa := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+	alfabeto := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 	strs := []string{}
-	s1 := strings.ReplaceAll(s, " ", "")
-	s2 := strings.ToLower(s1)
+
+	tratato :=
+		strings.ToLower(
+			strings.ReplaceAll(s, " ", ""))
 
 	// transformar string em array
-	for i := 0; i < len((s2)); i++ {
-		strs = append(strs, string(s2[i]))
+	for i := 0; i < len((tratato)); i++ {
+		strs = append(strs, string(tratato[i]))
 	}
 
 	// repassar todas as letras do alfabeto
-	for i := 0; i < len((alfa)); i++ {
-		letra := alfa[i]
+	for i := 0; i < len((alfabeto)); i++ {
+		letra := alfabeto[i]
 
 		//procurar letra do alfabeto na frase
 		found := false
@@ -44,29 +46,33 @@ func pangrams(s string) string {
 // PangramsInit inicia um algoritmo que verifica se
 // uma frase contem todas as letras do alfabeto
 func PangramsInit() {
-	//os.Stdin.WriteString("asasas")
 	//reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	if err != nil {
+
+	}
 	checkError(err)
 
 	defer stdout.Close()
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
+	fmt.Println("digite uma frase")
 	//s := readLine(reader)
-	//We promptly judged antique ivory buckles for the next prize
-	//We promptly judged antique ivory buckles for the prize
+
+	//result := pangrams("We promptly judged antique ivory buckles for the next prize")
+	result := pangrams("We promptly judged antique ivory buckles for the prize")
 	//result := pangrams(s)
 
-	result := pangrams("We promptly judged antique ivory buckles for the prize")
-
+	fmt.Print(result)
 	fmt.Fprintf(writer, "%s\n", result)
 
 	writer.Flush()
 }
 
 func readLine(reader *bufio.Reader) string {
+
 	str, _, err := reader.ReadLine()
 	if err == io.EOF {
 		return ""

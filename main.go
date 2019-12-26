@@ -1,5 +1,9 @@
 package main
 
 func main() {
-	PangramsInit()
+	//NestedInit()
+	//Callbyreference()
+	//Callbyreference2()
+	Slicesort()
+	//PangramsInit()
 }
