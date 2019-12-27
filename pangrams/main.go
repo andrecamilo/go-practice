@@ -45,7 +45,7 @@ func pangrams(s string) string {
 
 // PangramsInit inicia um algoritmo que verifica se
 // uma frase contem todas as letras do alfabeto
-func PangramsInit() {
+func main() {
 	//reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))

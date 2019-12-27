@@ -8,8 +8,7 @@ func modify(Z *int) {
 	*Z = 70
 }
 
-// Callbyreference Main function
-func Callbyreference() {
+func main() {
 
 	var Z int = 10
 

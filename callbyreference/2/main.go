@@ -18,8 +18,7 @@ func swap(x, y *int) int {
 	return tmp
 }
 
-// Callbyreference2 Main function
-func Callbyreference2() {
+func main() {
 
 	var f int = 700
 	var s int = 900

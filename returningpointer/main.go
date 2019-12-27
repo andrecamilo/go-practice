@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-// Returningpointer main function
-func Returningpointer () {
+func main() {
 
 	// calling the function
 	n := rpf()
@@ -16,7 +15,6 @@ func Returningpointer () {
 // defining function having integer
 // pointer as return type
 func rpf() *int {
-
 	// taking a local variable
 	// inside the function
 	// using short declaration

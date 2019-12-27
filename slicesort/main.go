@@ -8,7 +8,7 @@ import (
 )
 
 // Main function
-func Slicesort() {
+func main() {
 
 	// Creating and initializing
 	// a structure

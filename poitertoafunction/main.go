@@ -10,8 +10,7 @@ func ptf(a *int) {
 	*a = 748
 }
 
-// Poitertoafunction Main function
-func Poitertoafunction() {
+func main() {
 
 	// taking a normal variable
 	var x = 100
