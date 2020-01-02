@@ -6,6 +6,7 @@ import (
 	"io"
 	"math"
 	"os"
+	"reflect"
 	"strconv"
 	"strings"
 )
@@ -37,8 +38,7 @@ func funnyString(s string) string {
 	return "Not Funny"
 }
 
-/*
-func funnyString(s string) string {
+func funnyString2(s string) string {
 	fmt.Println("iniciando funnyString")
 
 	runes := []rune(s)
@@ -95,7 +95,6 @@ func funnyString(s string) string {
 
 	return "Not Funny"
 }
-*/
 
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
