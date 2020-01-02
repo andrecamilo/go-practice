@@ -11,8 +11,8 @@
             "mode": "auto",
             "program": "${fileDirname}",
             "env": {
-                "OUTPUT_PATH":"pangram"
-            },
+                "OUTPUT_PATH":"/home/andrecamilo/Projects/go/go-practice/hacker/funnystring/out"
+            },             
             "args": []
         }
     ]

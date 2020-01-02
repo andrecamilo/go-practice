@@ -5,25 +5,18 @@ Determine whether a give string is funny. If it is, return Funny, otherwise retu
 For example, given the string , the ordinal values of the charcters are .  and the ordinals are . The absolute differences of the adjacent elements for both strings are , so the answer is Funny.
 
 Function Description
-
 Complete the funnyString function in the editor below. For each test case, it should return a string, either Funny or Not Funny.
-
 funnyString has the following parameter(s):
-
 s: a string to test
-Input Format
 
+Input Format
 The first line contains an integer , the number of queries.
 The next  lines each contain a string, .
 
-Constraints
-
 Output Format
-
 For each string  print whether it is Funny or Not Funny on a new line.
 
 Sample Input
-
 2
 acxz
 bcxz
@@ -36,15 +29,9 @@ Explanation
 You can use  to store the reverse of .
 
 Test Case 0:
-
-, 
-Corresponding ASCII values of characters of the strings:
- and 
+Corresponding ASCII values of characters of the strings: 
 For both the strings the adjacent difference list is [2, 21, 2] so we print Funny.
 
 Test Case 1:
-
-, 
 Corresponding ASCII values of characters of the strings:
- and 
 The adjacent difference list for string  is [1, 21, 2] and for string  it is [2, 21, 1]. Since they are not the same we print Not Funny.
