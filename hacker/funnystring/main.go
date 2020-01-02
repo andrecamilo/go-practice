@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"math"
 	"os"
-	"reflect"
 	"strconv"
 	"strings"
 )
@@ -13,6 +13,32 @@ import (
 // Complete the funnyString function below.
 func funnyString(s string) string {
 
+	funny := true
+	runes := []rune(s)
+	j := len(runes) - 1
+
+	for i := 1; i < len(s); i++ {
+
+		xx := math.Abs(float64(runes[i]) - float64(runes[i-1]))
+		yy := math.Abs(float64(runes[j]) - float64(runes[j-1]))
+
+		if xx != yy {
+			funny = false
+			break
+		}
+
+		j--
+	}
+
+	if funny == true {
+		return "Funny"
+	}
+
+	return "Not Funny"
+}
+
+/*
+func funnyString(s string) string {
 	fmt.Println("iniciando funnyString")
 
 	runes := []rune(s)
@@ -69,6 +95,7 @@ func funnyString(s string) string {
 
 	return "Not Funny"
 }
+*/
 
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
@@ -90,6 +117,7 @@ func main() {
 		result := funnyString(s)
 
 		fmt.Fprintf(writer, "%s\n", result)
+		fmt.Println(result)
 	}
 
 	writer.Flush()
