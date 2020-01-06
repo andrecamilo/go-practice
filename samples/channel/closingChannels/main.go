@@ -23,8 +23,8 @@ func main() {
 	// all our jobs.
 	go func() {
 		for {
-			j, more := <-jobs
-			if more {
+			j, canalJobsAberto := <-jobs
+			if canalJobsAberto {
 				fmt.Println("received job", j)
 			} else {
 				fmt.Println("received all jobs")
