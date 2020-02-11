@@ -1,60 +1,66 @@
-// package averybigsum
+package main
 
-// import (
-// 	"bufio"
-// 	"fmt"
-// 	"io"
-// 	"os"
-// 	"strconv"
-// 	"strings"
-// )
+import (
+	"bufio"
+	"fmt"
+	"io"
+	"os"
+	"strconv"
+	"strings"
+)
 
-// // Complete the aVeryBigSum function below.
-// func aVeryBigSum(ar []int64) int64 {
-// 	return 1
-// }
+// Complete the aVeryBigSum function below.
+func aVeryBigSum(ar []int64) int64 {
+	var aa int64
 
-// func main() {
-// 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
+	for i := 0; i < len(ar); i++ {
+		aa += int64(ar[i])
+	}
 
-// 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
-// 	//checkError(err)
+	return aa
+}
 
-// 	defer stdout.Close()
+func main() {
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-// 	writer := bufio.NewWriterSize(stdout, 1024*1024)
+	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	checkError(err)
 
-// 	arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
-// 	checkError(err)
+	defer stdout.Close()
 
-// 	arTemp := strings.Split(readLine(reader), " ")
+	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-// 	var ar []int64
+	arCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+	checkError(err)
 
-// 	for i := 0; i < int(arCount); i++ {
-// 		arItem, err := strconv.ParseInt(arTemp[i], 10, 64)
-// 		checkError(err)
-// 		ar = append(ar, arItem)
-// 	}
+	arTemp := strings.Split(readLine(reader), " ")
 
-// 	result := aVeryBigSum(ar)
+	var ar []int64
 
-// 	fmt.Fprintf(writer, "%d\n", result)
+	for i := 0; i < int(arCount); i++ {
+		arItem, err := strconv.ParseInt(arTemp[i], 10, 64)
+		checkError(err)
+		ar = append(ar, arItem)
+	}
 
-// 	writer.Flush()
-// }
+	result := aVeryBigSum(ar)
 
-// func readLine(reader *bufio.Reader) string {
-// 	str, _, err := reader.ReadLine()
-// 	if err == io.EOF {
-// 		return ""
-// 	}
+	fmt.Fprintf(writer, "%d\n", result)
 
-// 	return strings.TrimRight(string(str), "\r\n")
-// }
+	writer.Flush()
+}
 
-// func checkError(err error) {
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// }
+func readLine(reader *bufio.Reader) string {
+	str, _, err := reader.ReadLine()
+	if err == io.EOF {
+		return ""
+	}
+
+	return strings.TrimRight(string(str), "\r\n")
+}
+
+func checkError(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
