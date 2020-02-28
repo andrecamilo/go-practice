@@ -21,23 +21,23 @@ func main() {
 	}
 
 	// Converte o endereco para a localizacao (latitude e longitude)
-	location, err := geocoder.Geocoding(address)
+	locacaoon, err := geocoder.Geocoding(address)
 
 	if err != nil {
 		fmt.Println("Nao foi possivel obter a localizacao: ", err)
 	} else {
-		fmt.Println("Latitude: ", location.Latitude)
-		fmt.Println("Longitude: ", location.Longitude)
+		fmt.Println("Latitude: ", locacaoon.Latitude)
+		fmt.Println("Longitude: ", locacaoon.Longitude)
 	}
 
 	// Define a latitude e longitude
-	location = geocoder.Location{
+	locacaoon = geocoder.locacaoon{
 		Latitude:  40.775807,
 		Longitude: -73.97632,
 	}
 
 	// Converte a localizacao (latitude e longitude) para um slice the enderecos
-	addresses, err := geocoder.GeocodingReverse(location)
+	addresses, err := geocoder.GeocodingReverse(locacaoon)
 
 	if err != nil {
 		fmt.Println("Nao foi possivel obter os enderecos: ", err)
