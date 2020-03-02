@@ -1,5 +1,5 @@
-module go-practice/db/mongo/handlers
-module go-practice/db/mongo/models
-module go-practice/db/mongo/dao
+module github.com/mongodb/mongo-go-driver
 
 go 1.13
+
+require github.com/gorilla/mux v1.7.4
