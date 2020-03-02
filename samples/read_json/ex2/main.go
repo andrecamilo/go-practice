@@ -42,8 +42,8 @@ func main() {
 	start := time.Now()
 
 	//fileName := os.Getenv("file_base")
-	//fileName := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_JAN_01_10.JSON"
-	fileName := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_20200131.json"
+	fileName := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_JAN_01_10.JSON"
+	//fileName := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_20200131.json"
 	//fileName := "../teste.json"
 	//fileName := "/home/andrecamilo/Projects/locacao_20200131.json"
 	f, err := os.Open(fileName)
