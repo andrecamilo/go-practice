@@ -15,7 +15,7 @@ var index int
 var setHeader bool
 
 func main() {
-	text := "/media/andrecamilo/Dados/dbs/locat/bases_locat/LOCAT_20200131.json"
+	text := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_20200131.json"
 	f, err := os.Open(text)
 	reg, _ := regexp.Compile("[^a-zA-Z0-9-:{}._,\\[\"/\\]]+")
 	// reader := bufio.NewReader(os.Stdin)
