@@ -15,7 +15,7 @@ var index int
 var setHeader bool
 
 func main() {
-	text := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_20200131.json"
+	text := "/media/andrecamilo/Dados/dbs/locacao/bases_locacao/locacao_JAN_01_10.JSON"
 	f, err := os.Open(text)
 	reg, _ := regexp.Compile("[^a-zA-Z0-9-:{}._,\\[\"/\\]]+")
 	// reader := bufio.NewReader(os.Stdin)
@@ -50,7 +50,8 @@ func main() {
 			return
 		}
 		data = data[:n]
-		processedString := reg.ReplaceAllString(string(data), "")
+		s := string(data)
+		processedString := reg.ReplaceAllString(s, "")
 		str := strings.Split(processedString, "[")
 		if len(str) > 1 {
 			sobraJSON = readLines(str[1], sobraJSON, newFile)
