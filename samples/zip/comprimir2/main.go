@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/go-br/estudos/zip/comprimir2/zip"
+	"github.com/andrecamilo/go-practice/samples/zip/comprimir2/zip"
 )
 
 /**********************************

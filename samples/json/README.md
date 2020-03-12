@@ -126,9 +126,9 @@ E claro se você quiser retornar um objeto vazio é só no lugar de usar um pont
 
 ### Structs parciais
 
-Muitas vezes não queremos todos os dados do JSON, alguns campos de alguma parte pode ser suficiente e não tem motivo para fazer [uma enorme struct como a do exemplo](https://github.com/go-br/estudos/blob/master/json/struct/main.go) se queremos apenas alguns dados.
+Muitas vezes não queremos todos os dados do JSON, alguns campos de alguma parte pode ser suficiente e não tem motivo para fazer [uma enorme struct como a do exemplo](https://github.com/andrecamilo/go-practice/samples/blob/master/json/struct/main.go) se queremos apenas alguns dados.
 
-Vamos supor por exemplo que queremos apenas o campo `metadata` do [JSON do nosso exemplo](https://github.com/go-br/estudos/blob/master/json/payload.json)
+Vamos supor por exemplo que queremos apenas o campo `metadata` do [JSON do nosso exemplo](https://github.com/andrecamilo/go-practice/samples/blob/master/json/payload.json)
 
 Não precisa declarar a struct inteira, para pegar apenas esse campo podemos declarar a seguinte struct.
 
@@ -188,7 +188,7 @@ Note que o campo na struct tem letra maiúscula o que faz com que ele seja visí
 
 ## Links úteis
 
-- [Código fonte](https://github.com/go-br/estudos/tree/master/json)
-- [Repositório do nosso grupo](https://github.com/go-br/estudos)
+- [Código fonte](https://github.com/andrecamilo/go-practice/samples/tree/master/json)
+- [Repositório do nosso grupo](https://github.com/andrecamilo/go-practice/samples)
 - [E você encontra mais exemplos aqui](https://github.com/go-br)
 - [Pagina do grupo de estudos](https://gopher.pro.br)

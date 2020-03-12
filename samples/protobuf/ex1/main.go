@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/go-br/estudos/protobuf/e1/user"
+	"github.com/andrecamilo/go-practice/samples/protobuf/ex1/user"
 	"github.com/golang/protobuf/proto"
 )
 
