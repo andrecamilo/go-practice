@@ -6,10 +6,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${fileDirname}",
-            "env": {
-                "OUTPUT_PATH":"/home/andrecamilo/Projects/go/go-practice/hacker/funnystring/out"
-            },             
+            "program": "/home/andrecamilo/Projects/github/go/go-practice/libs/govalidator/main.go",
             "args": []
         }
     ]
