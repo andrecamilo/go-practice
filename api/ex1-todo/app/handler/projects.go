@@ -12,6 +12,7 @@ import (
 func GetAllProjects(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	projects := []model.Project{}
 	db.Find(&projects)
+
 	respondJSON(w, http.StatusOK, projects)
 }
 
